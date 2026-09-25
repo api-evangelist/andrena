@@ -1,23 +1,77 @@
 aid: andrena
+
 name: Andrena
-description: 'Andrena is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Andrena provides high-speed wireless internet service to multi-tenant buildings, businesses, and households at affordable rates. Founded to make internet accessible for everyone, Andrena offers plans up to 1 Gbps with simple sign‑up, no installation delays, and a focus on customer experience. The company emphasizes data privacy, network management policies, and community support, aiming to deliver reliable connectivity across residential and commercial properties.'
+
 url: https://raw.githubusercontent.com/api-evangelist/andrena/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- Internet
+- Wireless
+- Broadband
+- Residential
+- Business
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/andrena-hosts.yml
+- type: Vendors
+  url: vendors/andrena-vendors.yml
+- type: Login
+  url: https://andrena.com/account/login/
+- type: DeveloperPortal
+  url: https://dev.andrena.com/
+- type: DomainSecurity
+  url: security/andrena-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/andrena
+  url: https://andrena.com
+- type: Documentation
+  url: https://andrena.com/about/
+- type: TermsOfService
+  url: https://andrena.com/terms/
+- type: PrivacyPolicy
+  url: https://andrena.com/privacypolicy/
+- type: Support
+  url: https://andrena.com/contact/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL contracts were found on api.andrena.com or dev.andrena.com.
+  evidence:
+    - url: https://dev.andrena.com/openapi.json
+      status: 404
+    - url: https://dev.andrena.com/swagger.json
+      status: 404
+    - url: https://api.andrena.com/openapi.json
+      status: 000
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

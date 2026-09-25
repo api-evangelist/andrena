@@ -1,0 +1,16 @@
+generated: '2026-09-24'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: andrena.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 12 16:28:12 2026 GMT
+  hsts: false
+domains:
+- domain: andrena.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
